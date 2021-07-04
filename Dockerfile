@@ -1,13 +1,6 @@
 FROM ubuntu:16.04 as builder
 
 RUN apt-get update \
-  && apt-get install -y \
-    build-essential \
-    libssl-dev \
-    libgmp-dev \
-    libcurl4-openssl-dev \
-    libjansson-dev \
-    automake \
   && rm -rf /var/lib/apt/lists/*
 
 COPY . /app/
